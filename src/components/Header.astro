@@ -12,13 +12,26 @@ import { SiteTitle } from '../consts';
 			</a>
 		</h2>
 		<div class="links">
+			<a href="https://fluxai.pro">Main Site</a>
 			<a href="mailto:support@fluxai.pro">Contact</a>
 		</div>
 	</nav>
 </header>
 
 <style>
+	.links {
+		display: flex;
+		gap: 1rem;
+	}
+	
 	.links a {
 		text-decoration: none;
+		color: inherit;
+		opacity: 0.8;
+		transition: opacity 0.2s ease;
+	}
+
+	.links a:hover {
+		opacity: 1;
 	}
 </style>
