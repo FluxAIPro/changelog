@@ -1,0 +1,24 @@
+---
+import '../styles/global.scss';
+import { SiteTitle } from '../consts';
+---
+
+<header>
+	<nav>
+		<h2 id="site_title">
+			<a href="/">
+				<img src="/logo.png" alt="Flux AI Logo" width="32" height="32" />
+				{SiteTitle}
+			</a>
+		</h2>
+		<div class="links">
+			<a href="mailto:support@fluxai.pro">Contact</a>
+		</div>
+	</nav>
+</header>
+
+<style>
+	.links a {
+		text-decoration: none;
+	}
+</style>
