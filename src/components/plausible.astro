@@ -1,0 +1,15 @@
+---
+// 你可以通过 props 传入这些值使组件更灵活
+interface Props {
+  domain: string;
+  customDomain?: string;
+}
+
+const { domain, customDomain = "https://click.pageview.click" } = Astro.props;
+---
+
+<script 
+  defer
+  data-domain={domain}
+  src={`${customDomain}/js/script.js`}
+></script>
