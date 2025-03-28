@@ -7,12 +7,16 @@ import Plausible from '../components/plausible.astro';
 type Props = HeadProps;
 
 const { ...head } = Astro.props;
+const defaultOgImage = {
+	src: 'https://s.detools.dev/assets/balg8q301.jpeg',
+	alt: 'Flux AI Changelog'
+};
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead {...head} />
+		<BaseHead {...head} image={head.image || defaultOgImage} />
 		<Plausible domain={Astro.url.hostname} />
 	</head>
 	<body>
